@@ -14,7 +14,7 @@
 + Add the option to search for every possible 2 or 3 letter usernames that may be available
 + Add an option to search a list of usernames you provide
 + (Maybe) make a function to add the ability to try and apply a username to your account (though I doubt I'll add it)
-+ Create an Executable so you can download and use instead of following the (setup instructions) - [<strong> Code will remain Open-source</strong>]
++ Create an Executable so you can download and use instead of following the (setup instructions) | <strong> code will remain open-source</strong>
 
 
 # Credits
