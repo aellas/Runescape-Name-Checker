@@ -2,10 +2,9 @@
 <strong>RS Name Checker</strong> is a tool written in python that allows you to search for a runescape name and see if it's available. <br /> 
 <br />
 <ul>
-  <li>First item</li>
-  <li>Second item</li>
-  <li>Third item</li>
-  <li>Fourth item</li>
+  <li>Completely open source</li>
+  <li>Use either RS Hiscores or RunePixels</li>
+  <li>GUI</li>
 </ul>
 <br />
 
