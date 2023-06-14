@@ -10,13 +10,14 @@ import json
 class RunescapeNameChecker:
     def __init__(self):
         self.root = ctk.CTk()
-        self.root.geometry("600x300")
+        self.root.geometry("600x130")
         self.root.title("RS Name Checker")
         self.root.resizable(False, False)
-
+        
+        
         # Side bar
-        self.frame = ctk.CTkFrame(self.root, width=140, height=280)
-        self.frame.place(x=15, y=10)
+        self.frame = ctk.CTkFrame(self.root, width=140, height=110)
+        self.frame.place(x=15, y=11)
 
         self.name_label = ctk.CTkLabel(self.frame, text="Name Checker", font=("Helvetica", 14, 'bold'), text_color="white")
         self.name_label.place(x=15, y=10)
@@ -24,14 +25,16 @@ class RunescapeNameChecker:
         self.name_label1 = ctk.CTkLabel(self.frame, text="Version 1.0", font=("Helvetica", 12), text_color="white")
         self.name_label1.place(x=35, y=30)
 
-        self.set_apperance = ctk.CTkLabel(self.frame, text="Theme", font=("Helvetica", 12, 'bold'), text_color="white")
-        self.set_apperance.place(x=45, y=205)
-
-        self.set_appearance_var = ctk.StringVar(value="Dark")
+        self.set_appearance_var = ctk.StringVar(value="Theme")
         self.set_appearance_menu = ctk.CTkOptionMenu(self.frame, values=["Dark", "Light"], font=("Helvetica", 12,),
                                                     variable=self.set_appearance_var, command=self.update_appearance,
                                                     width=110, text_color="white")
-        self.set_appearance_menu.place(x=12, y=235)
+        self.set_appearance_menu.place(x=13, y=65)
+        
+        #Side2
+        
+        self.frame1 = ctk.CTkFrame(self.root, width=140, height=110)
+        self.frame1.place(x=15, y=130)
 
         # main search
         self.main_frame = ctk.CTkFrame(self.root, width=415, height=110)
@@ -57,7 +60,11 @@ class RunescapeNameChecker:
 
         self.text = ctk.CTkLabel(self.main_frame, text="Search", font=("Helvetica", 12, "bold"), text_color="white")
         self.text.place(x=10, y=5)
-
+        
+        # optional menu
+        self.optional_frame = ctk.CTkFrame(self.root, width=415, height=110)
+        self.optional_frame.place(x=170, y=130)
+        
         self.hiscore = Hiscore()
 
     def check_name_availability(name: str, source: str) -> bool:
