@@ -18,11 +18,11 @@ class RunescapeNameChecker:
         self.frame = ctk.CTkFrame(self.root, width=140, height=280)
         self.frame.place(x=15, y=10)
 
-        self.name_label = ctk.CTkLabel(self.frame, text="Name Checker", font=("Helvetica", 16, 'bold'), text_color="white")
+        self.name_label = ctk.CTkLabel(self.frame, text="Name Checker", font=("Helvetica", 14, 'bold'), text_color="white")
         self.name_label.place(x=15, y=10)
 
         self.name_label1 = ctk.CTkLabel(self.frame, text="Version 1.0", font=("Helvetica", 12), text_color="white")
-        self.name_label1.place(x=35, y=35)
+        self.name_label1.place(x=35, y=30)
 
         self.set_apperance = ctk.CTkLabel(self.frame, text="Theme", font=("Helvetica", 12, 'bold'), text_color="white")
         self.set_apperance.place(x=45, y=205)
@@ -42,9 +42,6 @@ class RunescapeNameChecker:
 
         self.result_label = ctk.CTkLabel(self.main_frame1, text="", font=("Helvetica", 12), text_color="white")
         self.result_label.place(x=10, y=1)
-
-        self.source_label = ctk.CTkLabel(self.main_frame, text="Source", font=("Helvetica", 12, 'bold'), text_color="white")
-        self.source_label.place(x=55, y=150)
 
         self.source_var = ctk.StringVar(value="RS Hiscores")
         self.source_options: List[str] = ["RS Hiscores", "RunePixels"]
@@ -137,6 +134,10 @@ class RunescapeNameChecker:
             self.set_apperance.configure(text_color="white")
             self.set_appearance_menu.configure(text_color="white")
             self.name_label1.configure(text_color="white")
+            self.result_label.configure(text_color="white")
+            self.source_menu.configure(text_color="white")
+            self.button.configure(text_color="white")
+            self.text.configure(text_color="white")
 
         else:
             ctk.set_appearance_mode("light")
@@ -144,6 +145,10 @@ class RunescapeNameChecker:
             self.set_apperance.configure(text_color="black")
             self.set_appearance_menu.configure(text_color="black")
             self.name_label1.configure(text_color="black")
+            self.result_label.configure(text_color="black")
+            self.source_menu.configure(text_color="black")
+            self.button.configure(text_color="black")
+            self.text.configure(text_color="black")
 
     def run(self):
         self.root.mainloop()
