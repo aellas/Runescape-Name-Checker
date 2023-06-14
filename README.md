@@ -6,3 +6,4 @@
 
 # Setup Instructions
 + Download [Python](https://www.python.org/)
++ Clone repo or use git `git clone https://github.com/Arrayem/Runescape-Name-Checker.git`
