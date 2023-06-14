@@ -3,4 +3,6 @@
 <br />
 
 ![alt text](https://github.com/Arrayem/Runescape-Name-Checker/blob/main/images/UI.png?raw=true)
- 
+
+# Setup Instructions
+Download [Python](https://www.python.org/)
