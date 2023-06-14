@@ -11,3 +11,6 @@
 # UI
 ![alt text](https://github.com/Arrayem/Runescape-Name-Checker/blob/main/images/UI.png?raw=true)
 
+# Note
+Please note, if it says a name is "maybe available", it doesn't always mean it is. This could be for a number of reasons, like the account is banned or has been inactive for a long period of time, thus the username won't be available, it will always return "maybe available" as there is no real way to check this information.
+
