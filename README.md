@@ -15,7 +15,9 @@ Please note, if it says a name is "maybe available", it doesn't always mean it i
 
 # Future Updates
 + Add the option to search for every possible 2 or 3 letter usernames that may be available
-+ Sort my ugly code out :)
++ Add an option to search a list of usernames you provide
++ (Maybe) make a function to add the ability to try and apply a username to your account (though I doubt I'll add it)
++ Create an Executable so you can download and use instead of following the (setup instructions) - Code will remain open source
 
 
 # Credits
