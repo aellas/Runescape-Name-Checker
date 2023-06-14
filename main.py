@@ -60,7 +60,6 @@ class RunescapeNameChecker:
 
         self.hiscore = Hiscore()
 
-    @staticmethod
     def check_name_availability(name: str, source: str) -> bool:
         if source == "RS Hiscores":
             try:
