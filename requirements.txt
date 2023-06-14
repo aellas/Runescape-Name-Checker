@@ -1,0 +1,3 @@
+rs3_api
+customtkinter
+requests
