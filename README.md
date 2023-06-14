@@ -1,4 +1,4 @@
-# Runescape Name Checker
+# RS Name Checker
 <strong>RS Name Checker</strong> is a python script with a GUI that allows you to search for a username and see if it's still available.
 <br />
 
