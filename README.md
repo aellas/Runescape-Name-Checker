@@ -8,4 +8,4 @@
 + Download [Python](https://www.python.org/)
 + Clone repo or `git clone https://github.com/Arrayem/Runescape-Name-Checker.git`
 + Install requirements `pip install -r requirements.txt`
-+ `python3 main.py`
++ Run code `python3 main.py`
