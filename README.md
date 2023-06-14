@@ -10,14 +10,11 @@
 + Install requirements `pip install -r requirements.txt`
 + Run code `python3 main.py`
 
-# Note
-Please note, if it says a name is "maybe available", it doesn't always mean it is. This could be for a number of reasons, like the account is banned or has been inactive for a long period of time, thus the username won't be available, it will always return "maybe available" as there is no real way to check this information.
-
 # Future Updates
 + Add the option to search for every possible 2 or 3 letter usernames that may be available
 + Add an option to search a list of usernames you provide
 + (Maybe) make a function to add the ability to try and apply a username to your account (though I doubt I'll add it)
-+ Create an Executable so you can download and use instead of following the (setup instructions) - Code will remain open source
++ Create an Executable so you can download and use instead of following the (setup instructions) - [<strong> Code will remain Open-source</strong>]
 
 
 # Credits
