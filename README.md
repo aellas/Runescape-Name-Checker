@@ -13,7 +13,7 @@ You can currently search the <strong>OSRS</strong> / <strong>RS3</strong> Hiscor
 
 # Discord Bot
 Want to setup the code for a discord bot? Here's an example you could use 
-```
+```python
 import discord
 from discord.ext import commands
 from concurrent.futures import ThreadPoolExecutor
