@@ -12,7 +12,7 @@ You can currently search the <strong>OSRS</strong> / <strong>RS3</strong> Hiscor
 + Run code `python3 main.py`
 
 # Discord Bot
-Want to setup the code for a discord bot? Here's an example you could use 
+Not tested! Here's an example you could use :)
 ```python
 import discord
 from discord.ext import commands
