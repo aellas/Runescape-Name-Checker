@@ -65,6 +65,9 @@ class RunescapeNameChecker:
         self.optional_frame = ctk.CTkFrame(self.root, width=415, height=110)
         self.optional_frame.place(x=170, y=130)
         
+        self.root.bind("<Return>", lambda event: self.check_name())
+        self.root.bind("<Escape>", lambda event: self.root.destroy())
+
         self.hiscore = Hiscore()
         
     def check_name_availability(name: str, source: str) -> bool:
@@ -101,17 +104,19 @@ class RunescapeNameChecker:
         name: str = self.name_entry.get()
         source: str = self.source_var.get()
         if len(name) < 1:
-            self.result_label.configure(text="Name cannot be empty")
+         self.result_label.configure(text="Name cannot be empty")
         elif len(name) > 12:
-            self.result_label.configure(text="Name is too long")
-        elif not name.isalnum():
-            self.result_label.configure(text="Name contains invalid characters")
+         self.result_label.configure(text="Name is too long")
+        elif not all(char.isalnum() or char.isspace() or char == '_' for char in name):
+         self.result_label.configure(text="Name contains invalid characters")
+        elif name.strip() == '_':
+         self.result_label.configure(text="Name cannot be just underscores")
         else:
-            available = asyncio.run(self.check_name_availability_async(name, source))
-            if available:
-                self.result_label.configure(text="Username may be available")
-            else:
-                self.result_label.configure(text="Username is not available")
+         available = asyncio.run(self.check_name_availability_async(name, source))
+         if available:
+          self.result_label.configure(text="Username may be available")
+         else:
+          self.result_label.configure(text="Username is not available")
 
     async def check_name_availability_async(self, name: str, source: str) -> bool:
         
@@ -149,28 +154,25 @@ class RunescapeNameChecker:
      else:
         raise ValueError(f"Unsupported source: {source}")
     def update_appearance(self, mode):
-        if mode == "Dark":
-            ctk.set_appearance_mode("dark")
-            self.name_label.configure(text_color="white")
-            self.set_apperance.configure(text_color="white")
-            self.set_appearance_menu.configure(text_color="white")
-            self.name_label1.configure(text_color="white")
-            self.result_label.configure(text_color="white")
-            self.source_menu.configure(text_color="white")
-            self.button.configure(text_color="white")
-            self.text.configure(text_color="white")
-
-        else:
-            ctk.set_appearance_mode("light")
-            self.name_label.configure(text_color="black")
-            self.set_apperance.configure(text_color="black")
-            self.set_appearance_menu.configure(text_color="black")
-            self.name_label1.configure(text_color="black")
-            self.result_label.configure(text_color="black")
-            self.source_menu.configure(text_color="black")
-            self.button.configure(text_color="black")
-            self.text.configure(text_color="black")
-
+     if mode == "Dark":
+        ctk.set_appearance_mode("dark")
+        self.name_label.configure(text_color="white")
+        self.set_appearance_menu.configure(text_color="white")
+        self.name_label1.configure(text_color="white")
+        self.result_label.configure(text_color="white")
+        self.source_menu.configure(text_color="white")
+        self.button.configure(text_color="white")
+        self.text.configure(text_color="white")
+     else:
+        ctk.set_appearance_mode("light")
+        self.name_label.configure(text_color="black")
+        self.set_appearance_menu.configure(text_color="black")
+        self.name_label1.configure(text_color="black")
+        self.result_label.configure(text_color="black")
+        self.source_menu.configure(text_color="black")
+        self.button.configure(text_color="black")
+        self.text.configure(text_color="black")
+        
     def run(self):
         self.root.mainloop()
 
