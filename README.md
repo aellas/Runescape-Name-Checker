@@ -14,6 +14,17 @@ You can currently search the <strong>OSRS</strong> / <strong>RS3</strong> Hiscor
 # Discord Bot
 Want to setup the code for a discord bot? Here's an example you could use 
 ```
+import discord
+from discord.ext import commands
+from concurrent.futures import ThreadPoolExecutor
+from rs3_api.hiscores import Hiscore
+from osrs_api import Hiscores
+from typing import List
+import requests
+import aiohttp
+import asyncio
+import json
+
 @bot.command()
 async def checkname(ctx, name: str, source: str):
     if len(name) < 1:
