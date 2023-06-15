@@ -1,5 +1,6 @@
 from concurrent.futures import ThreadPoolExecutor
 from rs3_api.hiscores import Hiscore
+from osrs_api import Hiscores
 from typing import List
 import customtkinter as ctk
 import requests
@@ -13,8 +14,7 @@ class RunescapeNameChecker:
         self.root.geometry("600x130")
         self.root.title("RS Name Checker")
         self.root.resizable(False, False)
-        
-        
+         
         # Side bar
         self.frame = ctk.CTkFrame(self.root, width=140, height=110)
         self.frame.place(x=15, y=11)
@@ -46,8 +46,8 @@ class RunescapeNameChecker:
         self.result_label = ctk.CTkLabel(self.main_frame1, text="", font=("Helvetica", 12), text_color="white")
         self.result_label.place(x=10, y=1)
 
-        self.source_var = ctk.StringVar(value="RS Hiscores")
-        self.source_options: List[str] = ["RS Hiscores", "RunePixels"]
+        self.source_var = ctk.StringVar(value="OSRS Hiscores")
+        self.source_options: List[str] = ["OSRS Hiscores", "RS3 Hiscores", "RunePixels"]
         self.source_menu = ctk.CTkOptionMenu(self.main_frame, values=self.source_options, variable=self.source_var,
                                              font=("Helvetica", 12), text_color="white")
         self.source_menu.place(x=265, y=70)
@@ -66,14 +66,20 @@ class RunescapeNameChecker:
         self.optional_frame.place(x=170, y=130)
         
         self.hiscore = Hiscore()
-
+        
     def check_name_availability(name: str, source: str) -> bool:
-        if source == "RS Hiscores":
+        if source == "RS3 Hiscores":
             try:
                 Hiscore().user(name)
                 return False
             except Exception:
                 return True
+        elif source == "OSRS Hiscores":
+         try:
+            Hiscores(username=name)
+            return False
+         except Exception:
+            return True
         elif source == "RunePixels":
             url = f"https://runepixels.com:5000/players/{name}"
             with ThreadPoolExecutor() as executor:
@@ -108,12 +114,21 @@ class RunescapeNameChecker:
                 self.result_label.configure(text="Username is not available")
 
     async def check_name_availability_async(self, name: str, source: str) -> bool:
-     if source == "RS Hiscores":
+        
+     if source == "RS3 Hiscores":
         try:
-            await self.hiscore.user(name)
+            Hiscore().user(name)
             return False
         except Exception:
             return True
+        
+     elif source == "OSRS Hiscores":
+         try:
+            Hiscores(username=name)
+            return False
+         except Exception:
+            return True
+        
      elif source == "RunePixels":
         url = f"https://runepixels.com:5000/players/{name}"
         async with aiohttp.ClientSession() as session:
