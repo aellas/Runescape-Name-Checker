@@ -1,9 +1,9 @@
 # RS Name Checker
 <strong>RS Name Checker</strong> is a python script with a GUI that allows you to search for a username and see if it's still available.
-+ Search OSRS/RS3 Hiscores or RunePixels
+You can currently search the <strong>OSRS</strong> / <strong>RS3</strong> Hiscores & <strong>RunePixels</strong>
 <br />
 
-![alt text](https://github.com/Arrayem/Runescape-Name-Checker/blob/main/images/UI.png?raw=true)
+![alt text](https://github.com/Arrayem/Runescape-Name-Checker/blob/main/images/Updated_UI.png?raw=true)
 
 # Setup Instructions
 + Download [Python](https://www.python.org/)
@@ -19,5 +19,6 @@
 
 
 # Credits
-+ [Luciano Feder](https://github.com/lucianofeder) for the [RS3 API Wrapper](https://github.com/lucianofeder/runescape3-api-wrapper)
++ [Luciano Feder](https://github.com/lucianofeder) for the [RS3 API Wrapper](https://github.com/lucianofeder/runescape3-api-wrapper
++ [Chasesc](https://github.com/Chasesc) for the [OSRS API Wrapper](https://github.com/Chasesc/OSRS-API-Wrapper)
 
