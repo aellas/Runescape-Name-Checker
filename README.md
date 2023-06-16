@@ -13,7 +13,7 @@ You can currently search the <strong>OSRS</strong> / <strong>RS3</strong> Hiscor
 
 # Future Updates
 + Add the option to search for every possible 2 or 3 letter usernames that may be available
-+ Add an option to search a list of usernames you provide
++ Add an option to search a list of usernames you provide (done)
 + (Maybe) make a function to add the ability to try and apply a username to your account
 + Release an executable version, code will remain open-source so you can run it yourself
 
