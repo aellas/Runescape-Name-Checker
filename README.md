@@ -3,8 +3,7 @@
 You can currently search the <strong>OSRS</strong> / <strong>RS3</strong> Hiscores & <strong>RunePixels</strong>.
 <br />
 
-![alt text](https://github.com/Arrayem/Runescape-Name-Checker/blob/main/images/Single_Search.png?raw=true)
-![alt text](https://github.com/Arrayem/Runescape-Name-Checker/blob/main/images/Multi_Search.png?raw=true)
+![alt text](https://github.com/Arrayem/Runescape-Name-Checker/blob/main/images/Single_Search.png?raw=true) ![alt text](https://github.com/Arrayem/Runescape-Name-Checker/blob/main/images/Multi_Search.png?raw=true)
 
 # Setup Instructions
 + Download [Python](https://www.python.org/)
