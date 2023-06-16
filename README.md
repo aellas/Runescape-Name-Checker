@@ -13,7 +13,7 @@ You can use either <strong>OSRS</strong> /OR <strong>RS3</strong> Hiscores /OR <
 
 # Future Updates
 + Add the option to search for every possible 2 or 3 letter usernames that may be available
-+ <strong> Add an option to search a list of usernames you provide (done)</strong>
++ <strong> Add an option to search a list of usernames you provide (✅)</strong>
 + (Maybe) make a function to add the ability to try and apply a username to your account
 + Release an executable version, code will remain open-source so you can run it yourself
 
