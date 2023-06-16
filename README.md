@@ -18,7 +18,7 @@ You can currently search the <strong>OSRS</strong> / <strong>RS3</strong> Hiscor
 + Release an executable version, code will remain open-source so you can run it yourself
 
 # Credits
-+ [Luciano Feder](https://github.com/lucianofeder) for the [RS3 API Wrapper](https://github.com/lucianofeder/runescape3-api-wrapper)
-+ [Chasesc](https://github.com/Chasesc) for the [OSRS API Wrapper](https://github.com/Chasesc/OSRS-API-Wrapper)
++ [Luciano Feder](https://github.com/lucianofeder) for [RS3 API Wrapper](https://github.com/lucianofeder/runescape3-api-wrapper)
++ [Chasesc](https://github.com/Chasesc) for [OSRS API Wrapper](https://github.com/Chasesc/OSRS-API-Wrapper)
 
 
