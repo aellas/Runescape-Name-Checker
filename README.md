@@ -10,7 +10,9 @@ You can use either OSRS /OR RS3 Hiscores /OR RunePixels, you can choose which ev
 + Clone repo `git clone https://github.com/Arrayem/Runescape-Name-Checker.git`
 + Install requirements `pip install -r requirements.txt`
 + Run code `python3 main.py`
-+ The GUI will hang and become unresponsive when searching for a large amount of usernames, this is normal, give it time. 
+
+# Known Problems
++ GUI will become unresponsive when searching for a large amount of users, this will be fixed but give it time to search, took me 3 minutes to search 1k usernames.
 
 # Future Updates
 + Add the option to search for every possible 2 or 3 letter usernames that may be available
