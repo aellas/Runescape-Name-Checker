@@ -1,4 +1,4 @@
-# RSN Checker
+# 🔎 RSN Checker
 <strong>RS Name Checker</strong> is a python script with a GUI that allows you to search for a username and see if it's still available.<br />
 You can use either <strong>OSRS</strong> /OR <strong>RS3</strong> Hiscores /OR <strong>RunePixels</strong>, you can choose which ever you like.<br /> 
 <br />
