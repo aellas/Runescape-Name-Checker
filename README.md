@@ -1,7 +1,6 @@
 # RSN Checker
 <strong>RS Name Checker</strong> is a python script with a GUI that allows you to search for a username and see if it's still available.<br />
 You can use either OSRS /OR RS3 Hiscores /OR RunePixels, you can choose which ever you like.<br /> 
-The GUI will hang and become unresponsive when searching for a large amount of usernames, this is normal, give it time. 
 <br />
 
 ![alt text](https://github.com/Arrayem/Runescape-Name-Checker/blob/main/images/Single_Search.png?raw=true) ![alt text](https://github.com/Arrayem/Runescape-Name-Checker/blob/main/images/Multi_Search.png?raw=true)
@@ -11,6 +10,7 @@ The GUI will hang and become unresponsive when searching for a large amount of u
 + Clone repo `git clone https://github.com/Arrayem/Runescape-Name-Checker.git`
 + Install requirements `pip install -r requirements.txt`
 + Run code `python3 main.py`
++ The GUI will hang and become unresponsive when searching for a large amount of usernames, this is normal, give it time. 
 
 # Future Updates
 + Add the option to search for every possible 2 or 3 letter usernames that may be available
