@@ -12,7 +12,7 @@ You can use either OSRS /OR RS3 Hiscores /OR RunePixels, you can choose which ev
 + Run code `python3 main.py`
 
 # Known Problems
-+ Got any problems? raise an issue here [Issues](https://github.com/Arrayem/Runescape-Name-Checker/issues)
++ Got any problems? raise an issue :) 
 
 # Future Updates
 + Add the option to search for every possible 2 or 3 letter usernames that may be available
