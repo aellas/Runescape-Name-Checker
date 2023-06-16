@@ -4,6 +4,7 @@ You can currently search the <strong>OSRS</strong> / <strong>RS3</strong> Hiscor
 <br />
 
 ![alt text](https://github.com/Arrayem/Runescape-Name-Checker/blob/main/images/Single_Search.png?raw=true)
+![alt text](https://github.com/Arrayem/Runescape-Name-Checker/blob/main/images/Mutli_Search.png?raw=true)
 
 # Setup Instructions
 + Download [Python](https://www.python.org/)
