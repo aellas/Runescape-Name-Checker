@@ -12,11 +12,11 @@ You can use either <strong>OSRS</strong>, <strong>RS3</strong>, Hiscores or <str
 + Run code `python3 main.py` <br />
 + **You can now download an [executable](https://github.com/Arrayem/RSNChecker/releases/download/Latest/RSNChecker.exe) version!**
 
-# 🔮 Future Updates
-+ Add the option to search for every possible 2 or 3 letter usernames that may be available
-+ <strong> Add an option to search a list of usernames you provide ✅</strong>
-+ (Maybe) make a function to add the ability to try and apply a username to your account
-+ Release an executable version, code will remain open-source so you can run it yourself
+# 🔮 To-do List
+- [x] Add ability to search a list of usernames
+- [ ] Speed up RSN searches
+- [ ] Update GUI to be more fluid
+- [x] Release an executable version
 
 # ❤️ Credits
 + [Luciano Feder](https://github.com/lucianofeder) for [RS3 API Wrapper](https://github.com/lucianofeder/runescape3-api-wrapper)
