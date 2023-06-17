@@ -2,7 +2,6 @@
 <strong>RS Name Checker</strong> is a python script with a GUI that allows you to search for a username and see if it's still available.<br />
 You can use either <strong>OSRS</strong>, <strong>RS3</strong>, Hiscores or <strong>RunePixels</strong>, you can choose which ever you like.<br />
 <br /> 
-🔥 **You can now download an executable version!** 🔥<br />  
 ![alt text](https://github.com/Arrayem/Runescape-Name-Checker/blob/main/images/Single_Search.png?raw=true) ![alt text](https://github.com/Arrayem/Runescape-Name-Checker/blob/main/images/Multi_Search.png?raw=true)
 
 
@@ -11,6 +10,7 @@ You can use either <strong>OSRS</strong>, <strong>RS3</strong>, Hiscores or <str
 + Clone repo `git clone https://github.com/Arrayem/Runescape-Name-Checker.git`
 + Install requirements `pip install -r requirements.txt`
 + Run code `python3 main.py` <br />
++ 🔥 **You can now download an executable version!** 🔥<br />  
 
 # 🔮 Future Updates
 + Add the option to search for every possible 2 or 3 letter usernames that may be available
