@@ -10,6 +10,8 @@ You can use either <strong>OSRS</strong>, <strong>RS3</strong>, Hiscores or <str
 + Install requirements `pip install -r requirements.txt`
 + Run code `python3 main.py`
 
+> You can now download an executable version!
+
 # 🔮 Future Updates
 + Add the option to search for every possible 2 or 3 letter usernames that may be available
 + <strong> Add an option to search a list of usernames you provide ✅</strong>
