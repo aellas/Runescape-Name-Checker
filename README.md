@@ -6,7 +6,7 @@ You can use either <strong>OSRS</strong>, <strong>RS3</strong>, Hiscores or <str
 
 
 # ✍️ Setup Instructions
-**You can now download an executable version!**
+🔥 **You can now download an executable version!** 🔥
 + Download [Python](https://www.python.org/)
 + Clone repo `git clone https://github.com/Arrayem/Runescape-Name-Checker.git`
 + Install requirements `pip install -r requirements.txt`
