@@ -9,8 +9,8 @@ You can use either <strong>OSRS</strong>, <strong>RS3</strong>, Hiscores or <str
 + Download [Python](https://www.python.org/)
 + Clone repo `git clone https://github.com/Arrayem/Runescape-Name-Checker.git`
 + Install requirements `pip install -r requirements.txt`
-+ Run code `python3 main.py`
-\n 🔥 **You can now download an executable version!** 🔥 
++ Run code `python3 main.py` <br />
+🔥 **You can now download an executable version!** 🔥 
 
 # 🔮 Future Updates
 + Add the option to search for every possible 2 or 3 letter usernames that may be available
