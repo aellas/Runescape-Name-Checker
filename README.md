@@ -14,9 +14,9 @@ You can use either <strong>OSRS</strong>, <strong>RS3</strong>, Hiscores or <str
 
 # 🔮 To-do List
 - [x] Add ability to search a list of usernames
+- [x] Release an executable version
 - [ ] Speed up RSN searches
 - [ ] Update GUI to be more fluid
-- [x] Release an executable version
 
 # ❤️ Credits
 + [Luciano Feder](https://github.com/lucianofeder) for [RS3 API Wrapper](https://github.com/lucianofeder/runescape3-api-wrapper)
