@@ -4,6 +4,7 @@
 # 🔥 Releases
 **Current version 1.1**
 + You can now download the executable version [here](https://github.com/aellas/Runescape-Name-Checker/releases/tag/1.1)
+Want to run the code yourself without downloading the executable? Check out the # ✍️ Setup Instructions section
 
 # 🧭 Demo
 ![alt text](https://github.com/Arrayem/Runescape-Name-Checker/blob/main/images/gif.gif) 
