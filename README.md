@@ -4,6 +4,10 @@ You can search either a single username, or multiple usernames (seperated by a c
 <br />
 ![alt text](https://github.com/Arrayem/Runescape-Name-Checker/blob/main/images/gif.gif) 
 
+# 📝 Features
++ Search single or multiple usernames (multi usernames need to be seperated with a comma)
++ Change search location, ie (OSRS / RS3 hiscores or RunePixels)
+
 
 # ✍️ Setup Instructions
 + Download [Python](https://www.python.org/)
