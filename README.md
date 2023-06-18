@@ -12,7 +12,7 @@
 + Run code `python3 main.py` <br />
 + **You can now download an [executable](https://github.com/Arrayem/RSNChecker/releases/download/Latest/RSNChecker.exe) version!**
 
-# 🔮 To-do List
+# 📖 To-do List
 - [x] Add ability to search a list of usernames
 - [x] Release an executable version
 - [ ] Speed up RSN searches
