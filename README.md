@@ -4,9 +4,8 @@
 # 🔥 Releases
 **Current version 1.1**
 You have 2 ways to use RSNChecker
-+ Check out [Go to Real Cool Heading section](#✍️-Setup-Instructions)
-+ You can now download the executable version [here](https://github.com/aellas/Runescape-Name-Checker/releases/tag/1.1) <br />
-Want to run the code yourself without downloading the executable? Check out the ✍️ Setup Instructions section
++ Setup manually [✍️ Setup Instructions](#✍️-Setup-Instructions)
++ Download the executable version [here](https://github.com/aellas/Runescape-Name-Checker/releases/tag/1.1) <br />
 
 # 🧭 Demo
 ![alt text](https://github.com/Arrayem/Runescape-Name-Checker/blob/main/images/gif.gif) 
