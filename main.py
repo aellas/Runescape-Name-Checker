@@ -8,6 +8,7 @@ import json
 
 class RunescapeNameChecker:
     def __init__(self):
+        self.app = None
         self.root = ctk.CTk()
         self.root.geometry("600x355")
         self.root.title("RSNChecker")
@@ -106,25 +107,25 @@ class RunescapeNameChecker:
             if not stripped_name_loop:
                 continue
             if len(stripped_name_loop) < 1:
-                self.output_result.insert(
-                    "end", f"'{stripped_name_loop}': Name cannot be empty\n"
+                self.not_available.insert(
+                    "end", f"Name cannot be empty\n"
                 )
                 continue
             elif len(stripped_name_loop) > 12:
-                self.output_result.insert(
-                    "end", f"'{stripped_name_loop}': Name is too long\n"
+                self.not_available.insert(
+                    "end", f"Name is too long\n"
                 )
                 continue
             elif not all(
-                char.isalnum() or char.isspace() or char == "_" for char in stripped_name_loop
+                char.isalnum() or char.isspace() or char == "_" or char == "-" for char in stripped_name_loop
             ):
-                self.output_result.insert(
-                    "end", f"'{stripped_name_loop}': Name contains invalid characters\n"
+                self.not_available.insert(
+                    "end", f"invalid characters detected\n"
                 )
                 continue
             elif stripped_name_loop == "_":
-                self.output_result.insert(
-                    "end", f"'{stripped_name_loop}': Name cannot be just underscores\n"
+                self.not_available.insert(
+                    "end", f"'Name cannot be just underscores\n"
                 )
                 continue
             else:
