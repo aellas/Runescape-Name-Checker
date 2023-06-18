@@ -5,7 +5,7 @@
 ![alt text](https://github.com/Arrayem/Runescape-Name-Checker/blob/main/images/gif.gif) 
 
 # 🔥 Release 1.1
-+ Download the executable version [here](https://github.com/aellas/Runescape-Name-Checker/releases/tag/1.1) <br />
++ Download the executable version [https://github.com/aellas/Runescape-Name-Checker/releases/latest](https://github.com/aellas/Runescape-Name-Checker/releases/latest) <br />
 
 # ✍️ How To Setup
 + Download [Python](https://www.python.org/)
