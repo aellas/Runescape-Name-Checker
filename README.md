@@ -1,5 +1,5 @@
 # 🔎 RSNChecker
-<strong>RSNChecker</strong> is an open source project that allows you to search for runescape name to see if it's available. <break />
+<strong>RSNChecker</strong> is an open source project that allows you to search for runescape name to see if it's available. <br />
 You can check to see if a single username is available, or enter multiple usernames to check. 
 
 # 🧭 Demo
