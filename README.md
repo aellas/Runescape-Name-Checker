@@ -4,8 +4,10 @@
 # 🧭 Demo
 ![alt text](https://github.com/Arrayem/Runescape-Name-Checker/blob/main/images/gif.gif) 
 
-# ✍️ How To Setup
+# 🔥 Executable Version
 + Download the executable version [https://github.com/aellas/Runescape-Name-Checker/releases/latest](https://github.com/aellas/Runescape-Name-Checker/releases/latest) <br />
+
+# ✍️ Manual Setup
 + Download [Python](https://www.python.org/)
 + Clone repo `git clone https://github.com/Arrayem/Runescape-Name-Checker.git`
 + Install requirements `pip install -r requirements.txt`
