@@ -1,7 +1,7 @@
 # 🔎 RSNChecker
 <strong>RSNChecker</strong> allows you to search OSRS, RS3 hiscores or RunePixels to see if a runescape username is available. <br />
 You can search either a single username, or multiple usernames (seperated by a comma) <br /> 
-![alt text](https://github.com/Arrayem/Runescape-Name-Checker/blob/main/images/gif.gif)
+![alt text](https://github.com/Arrayem/Runescape-Name-Checker/blob/main/images/gif.gif) <br />
 
 
 # ✍️ Setup Instructions
