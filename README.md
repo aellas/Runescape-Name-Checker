@@ -1,6 +1,5 @@
 # 🔎 RSNChecker
 <strong>RSNChecker</strong> is an open source project written in python that allows you to search for a <strong>Runescape name</strong> to see if it's available. You can search for either a single username or enter multiple usernames (tested 500 usernames at once) with the added benefit of either checking OSRS hiscores, RS3 hiscores or RunePixels.com for a return on the availability. <br />
-This project is currently under construction, at this moment in time it works as it's intended to do, however I will improve/update stuff over time.
 
 # 🧭 Demo
 ![alt text](https://github.com/Arrayem/Runescape-Name-Checker/blob/main/images/gif.gif) 
