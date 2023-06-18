@@ -1,5 +1,5 @@
 # 🔎 RSNChecker
-<strong>RSNChecker</strong> is an open source project that allows you to search either OSRS, RS3 hiscores or RunePixels. You can search a single username or enter multiple usernames.
+<strong>RSNChecker</strong> is an open source project that allows you to search for runescape name to see if it's available. <break \>
 
 # 🧭 Demo
 ![alt text](https://github.com/Arrayem/Runescape-Name-Checker/blob/main/images/gif.gif) 
