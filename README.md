@@ -1,5 +1,5 @@
 # 🔎 RSNChecker
-<strong>RSNChecker</strong> is an open source project that allows you to search for a <strong>Runescape name</strong> to see if it's available. <br />
+<strong>RSNChecker</strong> is an open source project written in python that allows you to search for a <strong>Runescape name</strong> to see if it's available. Why is this project needed? Because so many people pay for stuff like this and alot of people get scammed because of it, so I'm here to make it completely free and for anyone to use. <br />
 You can check to see if a single username is available, or enter multiple usernames to check. 
 
 # 🧭 Demo
