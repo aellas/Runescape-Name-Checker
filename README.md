@@ -4,15 +4,12 @@
 # 🧭 Demo
 ![alt text](https://github.com/Arrayem/Runescape-Name-Checker/blob/main/images/gif.gif) 
 
-# 🔥 Release 1.1
-+ Download the executable version [https://github.com/aellas/Runescape-Name-Checker/releases/latest](https://github.com/aellas/Runescape-Name-Checker/releases/latest) <br />
-
 # ✍️ How To Setup
++ Download the executable version [https://github.com/aellas/Runescape-Name-Checker/releases/latest](https://github.com/aellas/Runescape-Name-Checker/releases/latest) <br />
 + Download [Python](https://www.python.org/)
 + Clone repo `git clone https://github.com/Arrayem/Runescape-Name-Checker.git`
 + Install requirements `pip install -r requirements.txt`
 + Run code `python3 main.py` <br />
-+ **You can now download an [executable](https://github.com/Arrayem/RSNChecker/releases/download/Latest/RSNChecker.exe) version!**
 
 # 📖 To-do List
 - [x] Add ability to search a list of usernames
