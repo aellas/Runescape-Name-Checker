@@ -15,8 +15,9 @@
 # 📖 To-do List
 - [x] Add ability to search a list of usernames
 - [x] Release an executable version
-- [ ] Speed up RSN searches
-- [ ] Update GUI to be more fluid
+- [x] Speed up RSN searches
+- [x] Update GUI to be more fluid
+- [x] Fix GUI to stop freezing
 
 # ❤️ Credits
 + [Luciano Feder](https://github.com/lucianofeder) for [RS3 API Wrapper](https://github.com/lucianofeder/runescape3-api-wrapper)
