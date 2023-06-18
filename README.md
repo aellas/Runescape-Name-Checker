@@ -6,6 +6,7 @@
 
 # 🔥 Executable Version
 + Download the executable version [https://github.com/aellas/Runescape-Name-Checker/releases/latest](https://github.com/aellas/Runescape-Name-Checker/releases/latest) <br />
+Or follow [✍️ Manual Setup](#✍️-Manual-setup) to download code and run with python!
 
 # ✍️ Manual Setup
 + Download [Python](https://www.python.org/)
