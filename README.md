@@ -1,5 +1,5 @@
-# 🔎 RSN Checker
-<strong>RS Name Checker</strong> is a python script with a GUI that allows you to search for a username and see if it's still available.<br />
+# 🔎 RSNChecker
+<strong>RSNChecker Checker</strong> is a python script with a GUI that allows you to search for a username and see if it's still available.<br />
 You can use either <strong>OSRS</strong>, <strong>RS3</strong>, Hiscores or <strong>RunePixels</strong>, you can choose which ever you like.<br />
 <br /> 
 ![alt text](https://github.com/Arrayem/Runescape-Name-Checker/blob/main/images/Single_Search.png?raw=true) ![alt text](https://github.com/Arrayem/Runescape-Name-Checker/blob/main/images/Multi_Search.png?raw=true)
