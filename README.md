@@ -13,7 +13,9 @@
 
 # ✏️ Generate
 I have added the ability to generate 50 random 2/3 letter/+ number rsn's 
+
 ![Image](/images/generate.png?raw=true "Generate")
+
 You can change how many names to generate by editing this code 
 ```
 def two_letter_func(name_entry):
