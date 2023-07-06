@@ -4,71 +4,221 @@ from typing import List
 import customtkinter as ctk
 import aiohttp
 import asyncio
-import json
+import functions.clear
+import functions.copy
+import functions.time
+import generate.random
 
 class RunescapeNameChecker:
     def __init__(self):
-        self.app = None
         self.root = ctk.CTk()
-        self.root.geometry("600x355")
+        self.root.geometry("570x395")
         self.root.title("RSNChecker")
         self.root.resizable(False, False)
-        self.frame = ctk.CTkFrame(self.root, width=140, height=330)
-        self.frame.place(x=15, y=11)
-        self.name_label = ctk.CTkLabel(self.frame, text="RSNChecker", font=("Helvetica", 14, 'bold'), text_color="white")
-        self.name_label.place(x=25, y=15)
-        self.name_label1 = ctk.CTkLabel(self.frame, text="Version 1.1", font=("Helvetica", 12), text_color="white")
-        self.name_label1.place(x=37, y=38)
-        self.set_appearance_var = ctk.StringVar(value="Theme")
-        self.set_appearance_menu = ctk.CTkOptionMenu(self.frame, values=["Dark", "Light"], font=("Helvetica", 12,),
-                                                    variable=self.set_appearance_var, command=self.update_appearance,
-                                                    width=110, text_color="white")
-        self.set_appearance_menu.configure(width=100)
-        self.set_appearance_menu.place(x=17, y=285)
-        self.main_frame = ctk.CTkFrame(self.root, width=415, height=110)
-        self.main_frame.place(x=170, y=11)
-        self.status_label = ctk.CTkLabel(self.main_frame, text="", font=("Helvetica", 12, "bold"), text_color="white")
-        self.status_label.place(x=265, y=60)
-        self.source_var = ctk.StringVar(value="OSRS Hiscores")
-        self.source_options: List[str] = ["OSRS Hiscores", "RS3 Hiscores", "RunePixels"]
-        self.source_menu = ctk.CTkOptionMenu(self.main_frame, values=self.source_options, variable=self.source_var,font=("Helvetica", 12), text_color="white")
-        self.source_menu.place(x=265, y=70)
-        self.name_entry = ctk.CTkEntry(self.main_frame, width=250, placeholder_text="Enter usernames", font=("Helvetica", 12))
+        
+        # ======= Search Frame =========
+        
+        self.search_frame = ctk.CTkFrame(self.root, width=355, height=110)
+        self.search_frame.place(x=10, y=10)
+        
+        # Search Label
+        self.search_label = ctk.CTkLabel(
+            self.search_frame,
+            text="Search",
+            font=("Roboto Medium", 14, "bold"),
+        )
+        self.search_label.place(x=10, y=3)
+        
+        # Search entry
+        self.name_entry = ctk.CTkEntry(
+            self.search_frame,
+            width=220,
+            font=("Roboto Medium", 12),
+            placeholder_text="Enter username",
+        )
         self.name_entry.place(x=10, y=35)
-        self.button = ctk.CTkButton(self.main_frame, text="Check", command=self.check_name, text_color="white")
-        self.button.place(x=265, y=35)
-        self.main_frame1 = ctk.CTkFrame(self.main_frame, width=250, height=30)
-        self.main_frame1.place(x=10, y=70)
-        self.checking_name = ctk.CTkLabel(self.main_frame1, text="", font=("Helvetica", 12), text_color="white")
-        self.checking_name.place(x=10, y=1)
-        self.text = ctk.CTkLabel(self.main_frame, text="Search", font=("Helvetica", 12, "bold"), text_color="white")
-        self.text.place(x=10, y=5)
+        
+        # Search button
+        self.search_button = ctk.CTkButton(
+            self.search_frame,
+            text="Check",
+            command=self.check_name,
+            font=("Roboto Medium", 12),
+            text_color="white",
+            width=100,
+            height=30,
+            
+        )
+        self.search_button.place(x=240, y=33)
+        
+        # Stop button
+        self.stop_button = ctk.CTkButton(
+            self.search_frame,
+            text="Stop",
+            command=self.stop_search,
+            font=("Roboto Medium", 12),
+            text_color="white",
+            width=100,
+            height=30,
+            
+        )
+        self.stop_button.place(x=240, y=70)
+        
+        # Progress bar
+        self.progress_bar = ctk.CTkFrame(
+            self.search_frame,
+            width=220,
+            height=30
+        )
+        self.progress_bar.place(x=10, y=70)
+        
+        self.progress_label = ctk.CTkLabel(
+            self.progress_bar,
+            text="",
+            font=("Roboto Medium", 12),
+            text_color="white",
+        )
+        self.progress_label.place(x=5, y=0)
         
         
-        self.not_available = ctk.CTkTextbox(self.root,width=200, height=170, activate_scrollbars=True)
-        self.not_available.place(x=170, y=170)  
-        self.available = ctk.CTkTextbox(self.root,width=200, height=170, activate_scrollbars=True)
-        self.available.place(x=383, y=170)
+        # ========= Source (Right) Frame =========
         
-        self.textbox1 = ctk.CTkTextbox(self.root,width=200, height=30)
-        self.textbox1.insert("0.0", "                 Not Available")
-        self.textbox1.place(x=171, y=131)
-        self.textbox1.configure(state="disabled")
+        self.source_frame = ctk.CTkFrame(self.root, width=177, height=110)
+        self.source_frame.place(x=380, y=10)
         
-        self.textbox2 = ctk.CTkTextbox(self.root,width=200, height=30)
-        self.textbox2.insert("0.0", "                 Maybe Available")
-        self.textbox2.place(x=380, y=131)   
-        self.textbox2.configure(state="disabled")
-
-        self.available_text = ctk.CTkLabel(self.textbox1, text="Not Available", font=("Helvetica", 12, "bold"), text_color="white")
-        self.available_text.place(x=240, y=132)
-             
-        self.root.bind("<Return>", lambda event: self.check_name())
-        self.root.bind("<Escape>", lambda event: self.root.destroy())
+        self.configure_label = ctk.CTkLabel(
+            self.source_frame,
+            text="Search Options",
+            font=("Roboto Medium", 14, "bold"),
+        )
+        self.configure_label.place(x=32, y=18)
+        
+        # Source Selection
+        self.selection_var = ctk.StringVar(value="OSRS Hiscores")
+        self.selection_options = ["OSRS Hiscores", "RS3 Hiscores"]
+        self.source_selection = ctk.CTkOptionMenu(
+            self.source_frame,
+            values = self.selection_options,
+            variable= self.selection_var,
+            font=("Roboto Medium", 12),
+        )
+        self.source_selection.place(x=18, y=55)
+        
+        # ========= Guide (Left) Frame =========
+        
+        self.guide_textbox = ctk.CTkTextbox(
+            self.root,
+            width=178,
+            height=181,
+            border_color="white",
+            border_width=1,
+            font=("Roboto Medium", 12),
+        )
+        self.guide_textbox.place(x=380, y=130)
                 
+        self.copy_button = ctk.CTkButton(
+            self.root,
+            text="Copy to Clipboard",
+            text_color="white",
+            command=lambda: functions.copy.copy_maybe_available(
+                self.guide_textbox, self.copy_button
+            ),
+            font=("Roboto Medium", 12),
+            width=178,
+            fg_color="#2F8C56",
+        )     
+        self.copy_button.place(x=380, y=320)
+        
+        self.clear_button = ctk.CTkButton(
+            self.root,
+            text="Clear Results",
+            text_color="white",
+            command=lambda: functions.clear.clear_search_results(self.guide_textbox),
+            width=178
+        )
+        self.clear_button.place(x=380, y=355)
 
+        self.random_frame = ctk.CTkFrame(self.root, width=355, height=90)
+        self.random_frame.place(x=10, y=130)
 
-    async def check_name_availability(self, name: str, source: str, session: aiohttp.ClientSession) -> bool:
+        self.two_letter = ctk.CTkButton(
+            self.random_frame,
+            text="Two Letters",
+            command=lambda: generate.random.two_letter_func(self.name_entry),
+            font=("Helvetica", 12),
+            text_color="white",
+            width=90,
+        )
+        self.two_letter.place(x=10, y=10)
+
+        self.three_letter = ctk.CTkButton(
+            self.random_frame,
+            text="Three Letters",
+            command=lambda: generate.random.three_letter_func(self.name_entry),
+            font=("Helvetica", 12),
+            text_color="white",
+            width=90,
+        )
+        self.three_letter.place(x=10, y=50)
+
+        self.two_letter_numbers = ctk.CTkButton(
+            self.random_frame,
+            text="(Two) L + N",
+            command=lambda: generate.random.two_letter_and_number_func(self.name_entry),
+            font=("Helvetica", 12),
+            text_color="white",
+            width=100,
+        )
+        self.two_letter_numbers.place(x=240, y=10)
+
+        self.three_letter_numbers = ctk.CTkButton(
+            self.random_frame,
+            text="(Three) L + N",
+            command=lambda: generate.random.three_letter_and_number_func(
+                self.name_entry
+            ),
+            font=("Helvetica", 12),
+            text_color="white",
+            width=100,
+        )
+        self.three_letter_numbers.place(x=240, y=50)
+
+        self.placeholder_button = ctk.CTkButton(
+            self.random_frame,
+            text="Two Numbers",
+            command=lambda: generate.random.two_number_func(self.name_entry),
+            font=("Helvetica", 12),
+            text_color="white",
+            width=105,
+        )
+        self.placeholder_button.place(x=117, y=10)
+
+        self.placeholder2_button = ctk.CTkButton(
+            self.random_frame,
+            text="Three Numbers",
+            command=lambda: generate.random.three_number_func(self.name_entry),
+            font=("Helvetica", 12),
+            text_color="white",
+            width=105,
+        )
+        self.placeholder2_button.place(x=117, y=50)
+        
+        # Logs text
+        self.logs_text = ctk.CTkTextbox(
+            self.root,
+            width=355,
+            height=152,
+            font=("Roboto Medium", 10),
+            border_color="white",
+            border_width=1
+        )
+        self.logs_text.insert('end', f"RSNChecker v1.5\n")
+        self.logs_text.insert('end', f"https://github.com/Aellas/RSNChecker\n")
+        self.logs_text.insert('end', f"\n{functions.time.get_time()}: GUI started\n")
+
+        self.logs_text.place(x=10, y=230)
+        
+    async def check_name_availability(self, name: str, source: str) -> bool:
         if source == "RS3 Hiscores":
             try:
                 Hiscore().user(name)
@@ -81,109 +231,89 @@ class RunescapeNameChecker:
                 return False
             except Exception:
                 return True
-        elif source == "RunePixels":
-            url = f"https://runepixels.com:5000/players/{name}"
-            async with session.get(url, timeout=10) as response:
-                try:
-                    data = await response.json()
-                    if data['name'].lower() == name.lower():
-                        return False
-                    else:
-                        return True
-                except json.JSONDecodeError:
-                    return True
-                except Exception as e:
-                    raise Exception(f"Unexpected error: {e}")
-        else:
-            raise ValueError(f"Unsupported source: {source}")
 
     async def search_name(self):
+        self.stop_flag = False
+
         name_entry_text = self.name_entry.get().strip()
         names: List[str] = name_entry_text.split(",")
-        source: str = self.source_var.get()
-        tasks = []
+        source: str = self.selection_var.get()
+        
+        maybe_available_names = []
+
         for name in names:
             stripped_name_loop = name.strip()
             if not stripped_name_loop:
                 continue
             if len(stripped_name_loop) < 1:
-                self.not_available.insert(
-                    "end", f"Name cannot be empty\n"
-                )
+                self.progress_label.configure(text="Name cannot be empty")
                 continue
             elif len(stripped_name_loop) > 12:
-                self.not_available.insert(
-                    "end", f"Name is too long\n"
-                )
+                self.progress_label.configure(text="Name is too long")
                 continue
             elif not all(
-                char.isalnum() or char.isspace() or char == "_" or char == "-" for char in stripped_name_loop
+                char.isalnum() or char.isspace() or char == "_" or char == "-"
+                for char in stripped_name_loop
             ):
-                self.not_available.insert(
-                    "end", f"invalid characters detected\n"
-                )
+                self.progress_label.configure(text="invalid characters detected")
                 continue
             elif stripped_name_loop == "_":
-                self.not_available.insert(
-                    "end", f"'Name cannot be just underscores\n"
-                )
+                self.progress_label.configure(text="Name cannot be just underscores")
                 continue
             else:
+                self.progress_label.configure(
+                    text=f"Checking [ {stripped_name_loop} ] is available..."
+                )
+
+                self.logs_text.insert("end", f"{functions.time.get_time()}: checking {stripped_name_loop} via {source}\n")
+                self.root.update()
                 async with aiohttp.ClientSession() as session:
-                    self.checking_name.configure(text=f"Checking availability for {stripped_name_loop}")
-                    self.root.update()
-                    await asyncio.sleep(0.5)
-                    tasks.append(
-                        asyncio.create_task(
-                            self.check_name_availability(stripped_name_loop, source, session)
+                    task = asyncio.create_task(
+                        self.check_name_availability(
+                            stripped_name_loop, source, session
                         )
                     )
-        if tasks:
-            results = await asyncio.gather(*tasks)
-            for name, result in zip(names, results):
-                if result:
-                    self.available.insert(
-                        "end", f"{name.strip()}\n"
-                    )
-                else:
-                    self.not_available.insert(
-                        "end", f"{name.strip()}\n"
-                    )
+                    tasks = [task]
+                    results = await asyncio.gather(*tasks)
 
-        self.checking_name.configure(text="")
+                    if self.stop_flag:
+                        break
 
-                
-    def update_appearance(self, mode):
-     if mode == "Dark":
-        ctk.set_appearance_mode("dark")
-        self.name_label.configure(text_color="white")
-        self.set_appearance_menu.configure(text_color="white")
-        self.name_label1.configure(text_color="white")
-        self.source_menu.configure(text_color="white")
-        self.button.configure(text_color="white")
-        self.text.configure(text_color="white")
-     else:
-        ctk.set_appearance_mode("light")
-        self.name_label.configure(text_color="black")
-        self.set_appearance_menu.configure(text_color="black")
-        self.name_label1.configure(text_color="black")
-        self.source_menu.configure(text_color="black")
-        self.button.configure(text_color="black")
-        self.text.configure(text_color="black")
-        
+                    if results[0]:
+                        maybe_available_names.append(stripped_name_loop)
+                        self.guide_textbox.insert(
+                            "end", stripped_name_loop + "\n"
+                        )
+                        if source == "RS3 Hiscores" or "OSRS Hiscores":
+                         self.logs_text.insert("end", f"[result] {stripped_name_loop} not found on {source} -> added to output\n")
+                        else:
+                         self.logs_text.insert("end", f"[result] {stripped_name_loop} found on {source} -> rsn taken\n")
+                    self.progress_label.configure(text="")
+                    if self.stop_flag:
+                        break
+        if len(maybe_available_names) == 0:
+            if len(names) == 1:
+                self.progress_label.configure(text="Username not available")
+            else:
+                self.progress_label.configure(text="Usernames not available")
+        else:
+            self.progress_label.configure(text="")
+            
+
     def check_name(self):
-        self.button.configure(state="disabled")
-        self.available.delete(1.0, "end")
-        self.not_available.delete(1.0, "end")
+        self.guide_textbox.delete(1.0, "end")
         asyncio.run(self.search_name())
-        self.button.configure(state="normal")
-        
+        self.search_button.configure(state="normal")        
+
+    def stop_search(self):
+        self.stop_flag = True
+
     def run(self):
-        self.root.mainloop()     
+        self.root.mainloop()
 
 def main():
     checker = RunescapeNameChecker()
     checker.run()
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

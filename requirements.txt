@@ -1,4 +1,4 @@
 rs3_api
 python-osrsapi
 customtkinter
-requests
+aiohttp
