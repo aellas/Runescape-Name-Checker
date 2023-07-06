@@ -23,7 +23,7 @@ def two_letter_func(name_entry):
     name_entry.delete(0, "end")
     name_entry.insert(0, ",".join(names))
 ```
-Where it says `for _ in range(50)` change `50` to your desired number.
+Where it says `for _ in range(50)` change `50` to your desired number
 
 # ❤️ Credits
 + [Luciano Feder](https://github.com/lucianofeder) for [RS3 API Wrapper](https://github.com/lucianofeder/runescape3-api-wrapper)
