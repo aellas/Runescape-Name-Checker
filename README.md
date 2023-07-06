@@ -17,8 +17,6 @@
 ![Image](/images/generate.png?raw=true "Generate")
 
 + You can change how many names to generate by editing the generate functions
-- Example
-
 ```python
 def two_letter_func(name_entry):
     names = ["".join(random.choices(string.ascii_letters, k=2)) for _ in range(50)]
