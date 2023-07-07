@@ -218,7 +218,7 @@ class RunescapeNameChecker:
 
         self.logs_text.place(x=10, y=230)
         
-    async def check_name_availability(self, name: str, source: str) -> bool:
+    async def check_name_availability(self, name: str, source: str):
         if source == "RS3 Hiscores":
             try:
                 Hiscore().user(name)
@@ -238,7 +238,7 @@ class RunescapeNameChecker:
         name_entry_text = self.name_entry.get().strip()
         names: List[str] = name_entry_text.split(",")
         source: str = self.selection_var.get()
-        
+
         maybe_available_names = []
 
         for name in names:
@@ -255,49 +255,35 @@ class RunescapeNameChecker:
                 char.isalnum() or char.isspace() or char == "_" or char == "-"
                 for char in stripped_name_loop
             ):
-                self.progress_label.configure(text="invalid characters detected")
+                self.progress_label.configure(text="Invalid characters detected")
                 continue
             elif stripped_name_loop == "_":
                 self.progress_label.configure(text="Name cannot be just underscores")
                 continue
+
+            self.progress_label.configure(
+                text=f"Checking [ {stripped_name_loop} ] is available..."
+            )
+
+            self.logs_text.insert("end", f"{functions.time.get_time()}: checking {stripped_name_loop} via {source}\n")
+            self.root.update()
+
+            result = await self.check_name_availability(stripped_name_loop, source)
+
+            if source == "RS3 Hiscores" or source == "OSRS Hiscores":
+                if result:
+                    maybe_available_names.append(stripped_name_loop)
+                    self.guide_textbox.insert("end", stripped_name_loop + "\n")
+                    self.logs_text.insert("end", f"[result] {stripped_name_loop} not found on {source} -> added to output\n")
             else:
-                self.progress_label.configure(
-                    text=f"Checking [ {stripped_name_loop} ] is available..."
-                )
+                if not result:
+                    maybe_available_names.append(stripped_name_loop)
+                    self.guide_textbox.insert("end", stripped_name_loop + "\n")
+                    self.logs_text.insert("end", f"[result] {stripped_name_loop} found on {source} -> rsn taken\n")
 
-                self.logs_text.insert("end", f"{functions.time.get_time()}: checking {stripped_name_loop} via {source}\n")
-                self.root.update()
-                async with aiohttp.ClientSession() as session:
-                    task = asyncio.create_task(
-                        self.check_name_availability(
-                            stripped_name_loop, source, session
-                        )
-                    )
-                    tasks = [task]
-                    results = await asyncio.gather(*tasks)
-
-                    if self.stop_flag:
-                        break
-
-                    if results[0]:
-                        maybe_available_names.append(stripped_name_loop)
-                        self.guide_textbox.insert(
-                            "end", stripped_name_loop + "\n"
-                        )
-                        if source == "RS3 Hiscores" or "OSRS Hiscores":
-                         self.logs_text.insert("end", f"[result] {stripped_name_loop} not found on {source} -> added to output\n")
-                        else:
-                         self.logs_text.insert("end", f"[result] {stripped_name_loop} found on {source} -> rsn taken\n")
-                    self.progress_label.configure(text="")
-                    if self.stop_flag:
-                        break
-        if len(maybe_available_names) == 0:
-            if len(names) == 1:
-                self.progress_label.configure(text="Username not available")
-            else:
-                self.progress_label.configure(text="Usernames not available")
-        else:
             self.progress_label.configure(text="")
+            if self.stop_flag:
+                break
             
 
     def check_name(self):
