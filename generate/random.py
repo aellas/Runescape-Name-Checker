@@ -17,7 +17,7 @@ def two_number_func(name_entry):
     name_entry.insert(0, ",".join(names))
 
 def three_number_func(name_entry):
-    names = ["".join(random.choices(string.digits, k=3)) for _ in range(1000)]
+    names = ["".join(random.choices(string.digits, k=3)) for _ in range(50)]
     name_entry.delete(0, "end")
     name_entry.insert(0, ",".join(names))
 
