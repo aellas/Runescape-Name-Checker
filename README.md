@@ -29,6 +29,8 @@ Where it says `for _ in range(50)` change `50` to your desired number
 + [Chasesc](https://github.com/Chasesc) for [OSRS API Wrapper](https://github.com/Chasesc/OSRS-API-Wrapper)
 
 # Update 2.0 [coming soon]
+![Image](/images/2.0.png?raw=true "Update 2.0")
+
 
 
 
