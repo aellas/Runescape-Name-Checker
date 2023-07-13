@@ -29,8 +29,24 @@ Where it says `for _ in range(50)` change `50` to your desired number
 + [Chasesc](https://github.com/Chasesc) for [OSRS API Wrapper](https://github.com/Chasesc/OSRS-API-Wrapper)
 
 # Update 2.0 [coming soon]
+
++ Renamed to RSNTool
++ Complete UI change
++ Fixed DPI scalling on Windows
++ You can now send results to a discord webhook + store webhooks locally via a json file
++ Ability to check via RS3 Client on a fresh account (NOTE: BANNABLE OFFENCE) + chance of having rsn bound to the new account
++ New Discord Bot section that allows u to create your own discord bot so u can search rsn's instead of using the GUI
++ Search improvements
+
+Note: a public discord bot will be available and will have new features for testing before it gets released to github
+
+# Preview Image
+
 ![Image](/images/2.0.png?raw=true "Update 2.0")
 
-
-
-
+Todo
+- [ ] Create GUI part for Discord bot
+- [ ] Improve checking via RS3 Client (currently uses pyautogui by checking images)
+- [ ] Complete settings GUI
+- [ ] Add links to new buttons
+- [ ] Automatic theming depending on system preferences
