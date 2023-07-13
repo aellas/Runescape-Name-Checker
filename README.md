@@ -7,7 +7,6 @@
 # ✍️ Manual Setup
 + Download [Python](https://www.python.org/)
 + Clone repo `https://github.com/aellas/testing.git`
-+ Or download from [here](https://github.com/aellas/testing/archive/refs/heads/main.zip)
 + Install requirements `pip install -r requirements.txt`
 + Run code `python3 main.py` <br />
 
@@ -28,5 +27,8 @@ Where it says `for _ in range(50)` change `50` to your desired number
 # ❤️ Credits
 + [Luciano Feder](https://github.com/lucianofeder) for [RS3 API Wrapper](https://github.com/lucianofeder/runescape3-api-wrapper)
 + [Chasesc](https://github.com/Chasesc) for [OSRS API Wrapper](https://github.com/Chasesc/OSRS-API-Wrapper)
+
+# Update 2.0 [coming soon]
+
 
 
