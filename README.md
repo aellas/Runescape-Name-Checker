@@ -24,10 +24,6 @@ def two_letter_func(name_entry):
 ```
 Where it says `for _ in range(50)` change `50` to your desired number
 
-# ❤️ Credits
-+ [Luciano Feder](https://github.com/lucianofeder) for [RS3 API Wrapper](https://github.com/lucianofeder/runescape3-api-wrapper)
-+ [Chasesc](https://github.com/Chasesc) for [OSRS API Wrapper](https://github.com/Chasesc/OSRS-API-Wrapper)
-
 # Update 2.0 [coming soon]
 
 + Renamed to RSNTool
@@ -50,3 +46,7 @@ Todo
 - [ ] Complete settings GUI
 - [ ] Add links to new buttons
 - [ ] Automatic theming depending on system preferences
+
+# ❤️ Credits
++ [Luciano Feder](https://github.com/lucianofeder) for [RS3 API Wrapper](https://github.com/lucianofeder/runescape3-api-wrapper)
++ [Chasesc](https://github.com/Chasesc) for [OSRS API Wrapper](https://github.com/Chasesc/OSRS-API-Wrapper)
