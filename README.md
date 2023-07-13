@@ -24,7 +24,7 @@ def two_letter_func(name_entry):
 ```
 Where it says `for _ in range(50)` change `50` to your desired number
 
-# Update 2.0 [coming soon]
+# 📖 Update 2.0 [coming soon]
 
 + Renamed to RSNTool
 + Complete UI change
@@ -36,7 +36,7 @@ Where it says `for _ in range(50)` change `50` to your desired number
 
 Note: a public discord bot will be available and will have new features for testing before it gets released to github
 
-# Preview Image
+# 👀 Preview Image
 
 ![Image](/images/2.0.png?raw=true "Update 2.0")
 
