@@ -6,7 +6,7 @@
 
 # ✍️ Manual Setup
 + Download [Python](https://www.python.org/)
-+ Clone repo `https://github.com/aellas/testing.git`
++ Clone repo `https://github.com/aellas/Runescape-Name-Checker.git`
 + Install requirements `pip install -r requirements.txt`
 + Run code `python3 main.py` <br />
 
