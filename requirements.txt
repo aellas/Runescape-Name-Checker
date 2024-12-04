@@ -2,3 +2,4 @@ rs3_api
 python-osrsapi
 customtkinter
 aiohttp
+pyperclip
